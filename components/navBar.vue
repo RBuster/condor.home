@@ -1,8 +1,10 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark" variant="dark">
-      <b-navbar-brand href="/">
-        <img src="~/assets/images/logo_sm.png" alt="Condor Home">
+      <b-navbar-brand>
+        <NuxtLink to="/">
+          <img src="~/assets/images/logo_sm.png" alt="Condor Home">
+        </NuxtLink>
       </b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse" />
