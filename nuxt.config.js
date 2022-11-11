@@ -57,8 +57,5 @@ export default {
   },
   styleResources: {
     scss: './assets/styles/_colors.scss'
-  },
-  router: {
-    base: '/condor.home/'
   }
 }
