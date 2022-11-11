@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark" variant="dark">
-      <b-navbar-brand href="#">
+      <b-navbar-brand href="/">
         <img src="~/assets/images/logo_sm.png" alt="Condor Home">
       </b-navbar-brand>
 

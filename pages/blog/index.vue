@@ -17,7 +17,7 @@ export default {
     blogPosts () {
       return BlogPosts.default.map((post) => {
         return {
-          routeTo: post.__file.replace('pages/', '').replace('.vue', ''),
+          routeTo: `/blog/${post.name?.toLower() || '#'}`,
           name: post.name || 'NO NAME'
         }
       })
