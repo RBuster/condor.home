@@ -17,7 +17,7 @@ export default {
     blogPosts () {
       return BlogPosts.default.map((post) => {
         return {
-          routeTo: `/blog/${post.name?.toLower() || '#'}`,
+          routeTo: `/blog/${post.name?.toLowerCase() || '#'}`,
           name: post.name || 'NO NAME'
         }
       })
