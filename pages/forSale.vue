@@ -14,6 +14,7 @@ export default {
     }
   },
   async fetch () {
+    console.log(process.env.baseUrl)
     if (this.listings.length <= 0) {
       await this.$axios.get(`${process.env.baseUrl}/api/getListings`).then((res) => {
         this.listings = res.data?.listings
