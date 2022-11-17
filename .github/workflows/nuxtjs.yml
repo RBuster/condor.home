@@ -22,7 +22,8 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: true
-
+env:
+  BASE_URL: "https://rbuster.github.io/condor.home"
 jobs:
   # Build job
   build:
@@ -71,8 +72,6 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Static HTML export with Nuxt
         run: ${{ steps.detect-package-manager.outputs.manager }} run generate
-        with:
-          BASE_URL: ${{ secrets.BASE_URL }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
