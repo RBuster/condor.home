@@ -23,7 +23,7 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
 env:
-  BASE_URL: ${{ secrets.BASE_URL }}
+  BASE_URL: "https://rbuster.github.io/condor.home"
 jobs:
   # Build job
   build:
