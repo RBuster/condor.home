@@ -1,9 +1,6 @@
 <template>
-  <div>
-    <NavBar />
-    <Nuxt />
-    <FooterCom />
-  </div>
+    <NavBar></NavBar>
+    <FooterCom></FooterCom>
 </template>
 <script>
 import NavBar from '../components/navBar.vue'
