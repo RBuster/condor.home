@@ -11,15 +11,11 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item>
-            <NuxtLink to="/">
-              Home page
-            </NuxtLink>
+          <b-nav-item to="/forSale">
+            For Sale
           </b-nav-item>
-          <b-nav-item>
-            <NuxtLink to="/blog">
-              Blog
-            </NuxtLink>
+          <b-nav-item to="/blog">
+            Blog
           </b-nav-item>
         </b-navbar-nav>
 

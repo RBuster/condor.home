@@ -25,8 +25,7 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  plugins: ['~/plugins/axios.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -60,5 +59,8 @@ export default {
   },
   serverMiddleware: [
     { path: '/api', handler: '~/api/mls.ts' }
-  ]
+  ],
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
+  }
 }
