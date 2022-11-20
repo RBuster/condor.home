@@ -6,7 +6,7 @@ export const useListingsStore = defineStore('listings', {
     getListings: state => state.listings,
     hasListings: state => state.listings.length > 0,
     getListingById: (state) => {
-      return (listingID: number) => state.listings.find((l) => l.ListingKeyNumeric === listingID)
+      return (listingID: number) => state.listings.find(l => l.ListingKeyNumeric === listingID)
     }
   }
 })

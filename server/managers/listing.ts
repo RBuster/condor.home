@@ -1,8 +1,7 @@
-import { Store } from '@pinia/nuxt/dist/runtime/composables';
 import { Listing } from '~~/interfaces/listing'
 import { useListingsStore } from '~~/store/listings'
 class ListingManager {
-  async loadListings(){
+  async loadListings () {
     const listingsStore = useListingsStore()
     const result = await $fetch('/api/mls', {
       method: 'POST',
@@ -13,16 +12,18 @@ class ListingManager {
     })
     listingsStore.listings = result.data
   }
+
   async getListings (): Promise<Listing[]> {
     const listingsStore = useListingsStore()
-    if(!listingsStore.hasListings){
-      await this.loadListings();
+    if (!listingsStore.hasListings) {
+      await this.loadListings()
     }
     return listingsStore.listings
   }
-  async getListingById(listingID: number): Promise<Listing | undefined>{
+
+  getListingById (listingID: number): Listing | undefined {
     const listingsStore = useListingsStore()
-    return listingsStore.getListingById(listingID);
+    return listingsStore.getListingById(listingID)
   }
 }
 export default new ListingManager()
