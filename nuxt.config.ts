@@ -11,7 +11,13 @@ export default defineNuxtConfig({
     }
   },
   modules: [
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    ['@pinia/nuxt', {
+      autoImports: [
+        'defineStore'
+      ]
+    }]
+
   ],
   build: {
     transpile: ['@heroicons/vue', '@headlessui/vue']

@@ -35,32 +35,26 @@
         :key="listing.ListingKeyNumeric"
         class="block p-6 rounded-lg shadow-lg bg-white max-w-sm my-6 mx-4"
       >
+        <img v-if="listing.PropertyPictures[0]?.MediaURL" :src="listing.PropertyPictures[0]?.MediaURL" alt="">
         <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">
           {{ listing.StreetNumberNumeric }} {{ listing.StreetName }} {{ listing.City }} {{ listing.StateOrProvince }}
         </h5>
         <p class="text-gray-700 text-base mb-4">
           {{ listing.PublicRemarks }}
         </p>
-        <button type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
-          Button
+        <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
+            <a :href="'/forSale/'+listing.ListingKeyNumeric">Show me more!</a>
         </button>
+
       </div>
     </div>
   </div>
 </template>
-<script>
-export default {
-  data () {
-    return {
-      isLoading: false,
-      listings: []
-    }
-  },
-  async mounted () {
-    this.isLoading = true
-    const result = await $fetch('/api/mls')
-    this.listings = result.data
-    this.isLoading = false
-  }
-}
+<script setup lang="ts">
+import { Listing } from '~~/interfaces/listing';
+import ListingManager from '../../server/managers/listing'
+let isLoading = true
+let listings: Listing[] = []
+listings = await ListingManager.getListings()
+isLoading = false
 </script>
