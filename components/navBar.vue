@@ -49,19 +49,19 @@
 </template>
 
 <script setup>
-import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
-import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
-const route = useRoute()
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue';
+import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline';
+const route = useRoute();
 const navigation = [
   { name: 'Home', href: '/', current: true },
   { name: 'Blog', href: '/blog', current: false },
   { name: 'For Sale', href: '/forSale', current: false }
-]
+];
 navigation.forEach((navItem) => {
   if (navItem.href === route.path) {
-    navItem.current = true
+    navItem.current = true;
   } else {
-    navItem.current = false
+    navItem.current = false;
   }
-})
+});
 </script>

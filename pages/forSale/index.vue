@@ -50,10 +50,10 @@
   </div>
 </template>
 <script setup lang="ts">
-import ListingManager from '../../server/managers/listing'
-import { Listing } from '~~/interfaces/listing'
-let isLoading = true
-let listings: Listing[] = []
-listings = await ListingManager.getListings()
-isLoading = false
+import ListingManager from '../../server/managers/listing';
+import { Listing } from '~~/interfaces/listing';
+let isLoading = true;
+let listings: Listing[] = [];
+listings = await ListingManager.getListings();
+isLoading = false;
 </script>

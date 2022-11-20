@@ -10,5 +10,5 @@
   </div>
 </template>
 <script setup lang="ts">
-const content = await queryContent('/blog').find()
+const content = await queryContent('/blog').find();
 </script>
