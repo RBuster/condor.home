@@ -16,7 +16,8 @@ export default defineNuxtConfig({
       autoImports: [
         'defineStore'
       ]
-    }]
+    }],
+    '@nuxt/content'
 
   ],
   build: {
