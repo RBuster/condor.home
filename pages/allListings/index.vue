@@ -54,6 +54,6 @@ import ListingManager from '../../server/managers/listing';
 import { Listing } from '../../interfaces/listing';
 let isLoading = true;
 let listings: Listing[] = [];
-listings = await ListingManager.getListings(0, 10, 812022600);
+listings = await ListingManager.getListings(0, 10);
 isLoading = false;
 </script>

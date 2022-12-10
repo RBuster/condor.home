@@ -55,7 +55,8 @@ const route = useRoute();
 const navigation = [
   { name: 'Home', href: '/', current: true },
   { name: 'Blog', href: '/blog', current: false },
-  { name: 'For Sale', href: '/forSale', current: false }
+  { name: 'For Sale by Condor', href: '/forSale', current: false },
+  { name: 'All Listings', href: '/allListings', current: false }
 ];
 navigation.forEach((navItem) => {
   if (navItem.href === route.path) {

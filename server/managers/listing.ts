@@ -1,22 +1,31 @@
 import { Listing } from '~~/interfaces/listing';
 import { useListingsStore } from '~~/store/listings';
+interface ListingsRequest{
+  page: number,
+  count: number,
+  realtorID: number | undefined
+}
 class ListingManager {
-  async loadListings () {
+  async loadListings (request: ListingsRequest) {
     const listingsStore = useListingsStore();
-    const result = await $fetch('/api/mls', {
+    const result = await $fetch('/api/residential', {
       method: 'POST',
       body: {
-        count: 12,
-        skip: 0
+        count: request.count,
+        skip: request.page,
+        realtorID: request.realtorID
       }
     });
     listingsStore.listings = result.data;
   }
 
-  async getListings (): Promise<Listing[]> {
+  async getListings (page: number, count: number, realtorID?: number): Promise<Listing[]> {
     const listingsStore = useListingsStore();
     if (!listingsStore.hasListings) {
-      await this.loadListings();
+      await this.loadListings({ page, count, realtorID });
+    }
+    if (realtorID) {
+      return listingsStore.listings.filter(listing => listing.ListAgentMlsId === realtorID.toString());
     }
     return listingsStore.listings;
   }
