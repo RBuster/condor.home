@@ -12,7 +12,7 @@ if (!store.hasListings) {
 }
 const listingId = parseInt(slug);
 if (!listingId) {
-  navigateTo('/forSale');
+  navigateTo('/allListings');
 }
 const listing = ListingManager.getListingById(listingId);
 </script>
