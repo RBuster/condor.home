@@ -1,19 +1,50 @@
 <template>
-  <div>
-    <div class="container mx-auto max-w-7xl">
-      <h1 class="font-medium leading-tight text-5xl mt-0 mb-2">
-        Condor Property Group
-      </h1>
-      <p class="lead">
-        Buying, selling or renting, we have you covered.
-      </p>
-      <hr class="my-4">
-      <p>Contact us for more info</p>
-      <div class="flex space-x-2">
-        <button type="button" class="inline-block px-4 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
-          Contact Us
-        </button>
+  <main>
+    <!-- Jumbotron -->
+    <div
+      class="
+      p-12
+      text-center
+      relative
+      overflow-hidden
+      bg-no-repeat
+      bg-cover
+      jumbotron"
+    >
+      <div
+        class="absolute
+        top-0
+        right-0
+        bottom-0
+        left-0
+        w-full
+        h-full
+        overflow-hidden
+        bg-fixed"
+        style="background-color: rgba(0, 0, 0, 0.6)"
+      >
+        <div class="flex justify-end items-end h-full pb-12 pr-12">
+          <div class="text-white">
+            <h4 class="font-semibold text-base mb-6" style="letter-spacing: 12px;">
+              BUYING <span class="text-yellow-300">|</span> SELLING <span class="text-yellow-300">|</span> RENTING
+            </h4>
+            <h2 class="font-semibold text-4xl mb-4">
+              WE HAVE YOU COVERED
+            </h2>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+    <!-- Jumbotron -->
+    <div class="flex">
+      ABOUT US
+    </div>
+  </main>
 </template>
+<style scoped lang="scss">
+.jumbotron{
+  background-image: url('~/assets/images/jumbotron_back.jpg');
+  height: 400px;
+  background-position: bottom;
+}
+</style>

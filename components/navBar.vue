@@ -1,5 +1,5 @@
 <template>
-  <Disclosure v-slot="{ open }" as="nav" class="bg-inherit">
+  <Disclosure v-slot="{ open }" as="nav" class="bg-inherit mb-4">
     <div class="mx-auto max-w-none px-2 sm:px-6 lg:px-8 nav-shadow border-b-zinc-200">
       <div class="flex flex-wrap justify-between lg:items-center sm:justify-start">
         <img class="mx-0 my-7 sm:m-7 sm:hidden" src="~/assets/images/logo_sm.png" alt="Condor">
