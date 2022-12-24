@@ -36,15 +36,29 @@
       </div>
     </div>
     <!-- Jumbotron -->
-    <div class="flex">
-      ABOUT US
+    <div class="flex flex-col mt-4 sm:flex-row sm:flex-nowrap">
+      <div class="w-2/3 mx-auto p-4 sm:mx-2 about-us">
+        <h2>ABOUT US</h2>
+        <p class="mb-2">
+          Freeze in hell batman! I'm not a pervert. No more complaining. That's for sleeping with my wife. I'm not a pervert. Fugettit, i'm not going to sit on your lap. Remember, i can break your neck like a chicken's.
+          Who are you? Stop being such a pussy. Alright everyone. Let's kick some ice. Crumb. Come on! Get to the choppa. Back to the carpet. I don't do requests. Who the fuck are you? One of us is in deep trouble.
+        </p>
+        <button class="bg-red-600 block mx-auto w-32 py-2 px-4">
+          MORE
+        </button>
+      </div>
+      <div class="bg-black h-56 w-1/3 mx-auto sm:mx-2" />
     </div>
   </main>
 </template>
 <style scoped lang="scss">
 .jumbotron{
-  background-image: url('~/assets/images/jumbotron_back.jpg');
+  background-image: url('~/assets/images/backgrounds/jumbotron_back.jpg');
   height: 400px;
   background-position: bottom;
+}
+.about-us{
+  background:transparent url('~/assets/images/backgrounds/wavy.jpg') no-repeat center center;
+  background-size: 100% 100%;
 }
 </style>
