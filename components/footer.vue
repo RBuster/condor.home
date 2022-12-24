@@ -5,7 +5,7 @@
     </div>
     <div class="h-5 w-full block bg-yellow-400" />
     <div class="bg-black pt-4">
-      <div class="info flex flex-col justify-center w-full pb-8 text-white text-xs sm:flex-row">
+      <div class="info flex flex-col justify-center w-full pb-8 text-white sm:flex-row">
         <div class="text-center pb-4 mx-4 info-block">
           <div class="text-red-500">
             OFFICE
@@ -47,6 +47,7 @@ footer{
   .info{
     .info-block{
       min-width: 172px;
+      font-size: .75rem;
     }
     div{
       font-family: 'Aviano Serif';
