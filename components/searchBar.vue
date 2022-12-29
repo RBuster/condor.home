@@ -1,6 +1,6 @@
 <template>
   <div class="searchBar flex items-center justify-center bg-gray-200 py-4 px-8">
-    <div class="xl:w-96">
+    <div class="w-full xl:w-96">
       <div class="input-group relative flex flex-nowrap items-stretch w-full">
         <input type="search" class="form-control relative flex-auto min-w-0 block w-full mr-4 px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
         <button id="button-addon2" class="btn px-6 py-2.5 bg-black text-white font-medium text-xs leading-tight uppercase shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out flex items-center" type="button">

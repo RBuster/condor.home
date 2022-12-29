@@ -38,7 +38,7 @@ export default defineComponent({
     slides: [
       {
         id: 0,
-        imageRef: 'https://placekitten.com/g/200/300',
+        imageRef: '/team-members/Lia_Irvin.jpg',
         name: 'Lia Irvin',
         title: 'Owner',
         dre: 1234567
