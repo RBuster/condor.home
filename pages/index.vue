@@ -50,7 +50,7 @@
       <div class="bg-black h-56 w-1/3 mx-auto sm:mx-2" />
     </div>
     <!-- Meet the team -->
-    <div class="text-center mt-4 max-w-3xl mx-auto">
+    <div class="text-center mt-4 mb-4 max-w-3xl mx-auto">
       <div class="text-xl">
         MEET THE
       </div>
@@ -59,7 +59,7 @@
         TEAM
         <div class="border-b-2 w-40 ml-8" />
       </div>
-      <p>
+      <p class="mb-4">
         You blew my cawva! You've just been erased... Do it! Hey light head. Fuck you. Now listen to me very carefully. Feel how soft my skin is. The iceman cometh...
       </p>
       <TeamCarousel />
@@ -73,7 +73,7 @@
   background-position: bottom;
 }
 .about-us{
-  background:transparent url('~/assets/images/backgrounds/wavy.jpg') no-repeat center center;
+  background:transparent url('~/assets/images/backgrounds/wavy.png') no-repeat center center;
   background-size: 100% 100%;
 }
 </style>
