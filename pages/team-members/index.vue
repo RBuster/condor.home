@@ -12,8 +12,7 @@
   </div>
 </template>
 <script setup>
-const route = useRoute();
 const navigation = [
-  { name: 'Lia Irvin', href: route.fullPath + 'lia-irvin' }
+  { name: 'Lia Irvin', href: '/team-members/lia-irvin' }
 ];
 </script>
