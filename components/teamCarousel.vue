@@ -1,5 +1,5 @@
 <template>
-  <div class="carousel-wrapper relative w-3/4 mx-auto sm:w-full">
+  <div class="carousel-wrapper relative w-3/4 mx-auto">
     <Carousel ref="carousel" :settings="settings" :breakpoints="breakpoints">
       <Slide v-for="slide in slides" :key="slide.dre">
         <div class="carousel_item flex flex-col flex-wrap w-full">
