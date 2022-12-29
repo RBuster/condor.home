@@ -49,6 +49,7 @@
       </div>
       <div class="bg-black h-56 w-1/3 mx-auto sm:mx-2" />
     </div>
+    <!-- Meet the team -->
     <div class="text-center mt-4 max-w-3xl mx-auto">
       <div class="text-xl">
         MEET THE
@@ -61,6 +62,7 @@
       <p>
         You blew my cawva! You've just been erased... Do it! Hey light head. Fuck you. Now listen to me very carefully. Feel how soft my skin is. The iceman cometh...
       </p>
+      <TeamCarousel />
     </div>
   </main>
 </template>
