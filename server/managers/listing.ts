@@ -1,9 +1,10 @@
 import { Listing } from '~~/interfaces/listing';
+import { useFeaturedRentalsStore } from '~~/store/featuredRentals';
 import { useListingsStore } from '~~/store/listings';
 interface ListingsRequest{
   page: number,
   count: number,
-  realtorID: number | undefined
+  realtorID?: number
 }
 class ListingManager {
   async loadListings (request: ListingsRequest) {
@@ -17,6 +18,19 @@ class ListingManager {
       }
     });
     listingsStore.listings = result.data;
+  }
+
+  async loadFeaturedRentals (request: ListingsRequest) {
+    const featuredRentalsStore = useFeaturedRentalsStore();
+    const result = await $fetch('/api/featuredRentals', {
+      method: 'POST',
+      body: {
+        count: request.count,
+        skip: request.page,
+        realtorID: request.realtorID
+      }
+    });
+    featuredRentalsStore.listings = result.data;
   }
 
   async getListings (page: number, count: number, realtorID?: number): Promise<Listing[]> {

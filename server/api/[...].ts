@@ -62,4 +62,21 @@ router.post('/residential', defineEventHandler(async (event) => {
   };
 }));
 
+router.post('/featuredRentals', defineEventHandler(async (event) => {
+  const url = 'https://retsapi.raprets.com/LUBB/RESO/OData/Property?$filter=MlsStatus%20eq%20%27Active%27%20and%20ListOfficeMlsId%20eq%20%271328%27&Class=ResidentialLease&$expand=PropertyPictures';
+  let result = await post(url, event.context.auth.token);
+  if (result.data.error) {
+    if (result.data.error === 'invalid_grant') {
+      const loginResult = await login();
+      result = await post(url, loginResult.access_token);
+    } else {
+      // email log eventually
+      console.error(result.data);
+    }
+  }
+  return {
+    data: result.data.value as Listing[] ?? []
+  };
+}));
+
 export default useBase('/api', router.handler);
