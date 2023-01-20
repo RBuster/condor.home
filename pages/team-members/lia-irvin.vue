@@ -1,5 +1,18 @@
 <template>
   <div>
+    <div>
+      <nav class="bg-grey-light rounded-md w-fit mx-auto text-center mb-8 font-semibold">
+        <ol class="list-reset flex">
+          <li><a href="#" class="text-black">HOME</a></li>
+          <li><span class="text-brand-red mx-2">></span></li>
+          <li><a href="#" class="text-black">MEET THE TEAM</a></li>
+          <li><span class="text-brand-red mx-2">></span></li>
+          <li class="text-black">
+            LIA IRVIN
+          </li>
+        </ol>
+      </nav>
+    </div>
     <!-- Jumbotron -->
     <div
       class="
@@ -31,23 +44,29 @@
       </div>
     </div>
     <!-- Jumbotron -->
-    <div class="relative team-member-wrapper">
-      <div class="bg-black w-3/4 h-80 team-member-background">
-        <div class="team-member-copy-lg hidden md:block">
+    <div class="relative team-member-wrapper hidden lg:block">
+      <div class="bg-black w-3/4 h-80 mb-28 team-member-background">
+        <div class="team-member-copy-lg hidden lg:block">
           <p class="text-white" v-html="teamMemeberCopy" />
         </div>
+        <div class="team-member-image">
+          <img src="/team-members/Lia_Irvin.jpg" alt="Lia Irvin Realtor">
+        </div>
       </div>
-
+    </div>
+    <div class="bg-black h-fit p-4 block lg:hidden">
       <div class="team-member-image">
         <img src="/team-members/Lia_Irvin.jpg" alt="Lia Irvin Realtor">
       </div>
+      <div class="team-member-copy-sm mt-16 text-center mb-8 mx-8 text-white">
+        <p v-html="teamMemeberCopy" />
+      </div>
     </div>
-    <div class="team-member-copy-sm mt-16 text-center mb-8 mx-8 block md:hidden">
-      <p v-html="teamMemeberCopy" />
-    </div>
+
     <div class="contact bg-brand-yellow text-center p-2 text-4xl ml-0 md:ml-96 md:text-left">
       <span class="pb-2 sm:pb-0">806.123.4567</span> <span class="hidden sm:inline-block">|</span> email@gmail.com
     </div>
+    <ContactUs />
   </div>
 </template>
 <script setup>
@@ -72,7 +91,7 @@ const teamMemeberCopy = `<span class="text-brand-yellow">LOREM</span> The paveme
     width: fit-content;
     border: solid white 10px;
     >img{
-      height: inherit;
+      height: 500px;
     }
 }
 .team-member-background{
@@ -94,7 +113,7 @@ const teamMemeberCopy = `<span class="text-brand-yellow">LOREM</span> The paveme
     top: 2rem;
     margin: 0 auto;
     z-index: 1;
-    height: 500px;
+    height: fit-content;
     width: fit-content;
   }
   .team-member-background{
@@ -110,10 +129,8 @@ const teamMemeberCopy = `<span class="text-brand-yellow">LOREM</span> The paveme
 }
 @media (min-width: 700px) {
   .team-member-image{
-    position: absolute;
-    left: 10%;
-    top: 120px;
-    height: 500px;
+    position: static;
+    height: fit-content;
     width: fit-content;
   }
   .team-member-background{
@@ -127,30 +144,46 @@ const teamMemeberCopy = `<span class="text-brand-yellow">LOREM</span> The paveme
     }
   }
   .team-member-wrapper{
-    height: 40rem;
+    height: 45rem;
   }
 }
 @media (min-width: 830px) {
   .team-member-background{
     .team-member-copy-lg{
-      width: 45%;
+      width: 60%;
     }
   }
 }
+
 @media (min-width: 920px) {
   .team-member-image{
-      position: absolute;
-      right: 55%;
-      top: 120px;
-      height: 500px;
+      position: static;
+      height: fit-content;
       width: fit-content;
   }
+
   .team-member-background{
     right: 5%;
     width: 850px;
   }
 }
+@media(min-width: 1024px){
+  .team-member-image{
+      position: relative;
+      left: -33%;
+      top: 60px;
+      height: fit-content;
+      width: fit-content;
+  }
+}
 @media (min-width: 1180px) {
+  .team-member-image{
+      position: relative;
+      left: -33%;
+      top: 60px;
+      height: fit-content;
+      width: fit-content;
+  }
   .team-member-background{
     right: 15%;
     .team-member-copy-lg{
@@ -159,25 +192,32 @@ const teamMemeberCopy = `<span class="text-brand-yellow">LOREM</span> The paveme
   }
 }
 @media (min-width: 1350px) {
+  .team-member-image{
+      position: relative;
+      left: -33%;
+      top: 60px;
+      height: fit-content;
+      width: fit-content;
+  }
   .team-member-background{
     .team-member-copy-lg{
-      width: 65%;
+      width: 60%;
     }
   }
 }
 @media (min-width: 1600px) {
   .team-member-image{
-      position: absolute;
-      right: 55%;
-      top: 120px;
-      height: 500px;
+      position: relative;
+      left: -40%;
+      top: 62px;
+      height: fit-content;
       width: fit-content;
   }
   .team-member-background{
     right: 15%;
     width: 60%;
     .team-member-copy-lg{
-      width: 75%;
+      width: 70%;
     }
   }
 }

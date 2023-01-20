@@ -28,7 +28,7 @@
       >
         <div class="flex justify-end items-end h-full pb-12 pr-12">
           <div class="text-white">
-            <h4 class="font-semibold text-base mb-6" style="letter-spacing: 12px;">
+            <h4 class="font-semibold text-base sm:text-xl mb-6" style="letter-spacing: 12px;">
               BUYING <span class="text-brand-yellow">|</span> SELLING <span class="text-brand-yellow">|</span> RENTING
             </h4>
             <h2 class="font-semibold text-4xl mb-4">
@@ -52,7 +52,7 @@
       </div>
       <div class="bg-black h-56 w-1/3 mx-auto sm:mx-2" />
     </div>
-    <div class="bg-brand-blue text-white px-8 py-4 max-w-fit mx-auto mt-4 text-3xl">
+    <div class="bg-brand-blue text-white px-8 py-4 max-w-fit mx-auto mt-4 text-lg md:text-3xl">
       CONTACT US TO MAKE THE NEXT MOVE IN YOUR LIFE.
     </div>
   </main>
