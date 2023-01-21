@@ -66,7 +66,6 @@
     <div class="contact bg-brand-yellow text-center p-2 text-4xl ml-0 md:ml-96 md:text-left">
       <span class="pb-2 sm:pb-0">806.123.4567</span> <span class="hidden sm:inline-block">|</span> email@gmail.com
     </div>
-    <ContactUs />
   </div>
 </template>
 <script setup>

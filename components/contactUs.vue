@@ -1,32 +1,65 @@
 <template>
-  <div class="wrapper w-full mt-8 py-8">
-    <div class="inner mx-auto">
-      <div class="flex flex-wrap justify-center flex-col p-8 lg:flex-row">
-        <div class="input-group">
-          <label class="text-4xl text-white" for="name">NAME</label>
-          <input id="name" class="block bg-transparent text-white text-3xl border-b-2 border-white" type="text">
+  <form @submit.prevent="sendEmail()">
+    <div class="wrapper w-full mt-8 py-8">
+      <div class="inner mx-auto">
+        <div class="flex flex-wrap justify-center flex-col p-8 lg:flex-row">
+          <div class="input-group">
+            <label class="text-4xl text-white" for="fullName">NAME</label>
+            <input v-model="fullName" name="fullName" class="block bg-transparent text-white text-3xl border-b-2 border-white" type="text">
+          </div>
+          <div class="input-group">
+            <label class="text-4xl text-white" for="emailAddress">EMAIL</label>
+            <input v-model="email" name="emailAddress" class="block bg-transparent text-white text-3xl border-b-2 border-white" type="text">
+          </div>
+          <div class="input-group">
+            <label class="text-4xl text-white" for="phoneNumber">PHONE</label>
+            <input v-model="phone" name="phoneNumber" class="block bg-transparent text-white text-3xl border-b-2 border-white" type="text">
+          </div>
         </div>
-        <div class="input-group">
-          <label class="text-4xl text-white" for="email">EMAIL</label>
-          <input id="email" class="block bg-transparent text-white text-3xl border-b-2 border-white" type="text">
+        <div class="w-full mt-8 p-8">
+          <div class="input-group area mx-auto">
+            <label class="text-4xl text-white" for="message">MESSAGE</label>
+            <textarea
+              v-model="message"
+              name="message"
+              class="block bg-transparent text-white text-3xl border-b-2 border-white w-full"
+              cols="30"
+              rows="5"
+            />
+          </div>
         </div>
-        <div class="input-group">
-          <label class="text-4xl text-white" for="name">PHONE</label>
-          <input id="name" class="block bg-transparent text-white text-3xl border-b-2 border-white" type="text">
-        </div>
+        <button class="bg-brand-red block mx-auto w-32 py-2 px-4 text-white">
+          SEND
+        </button>
       </div>
-      <div class="w-full mt-8 p-8">
-        <div class="input-group area mx-auto">
-          <label class="text-4xl text-white" for="name">MESSAGE</label>
-          <textarea id="message" name="message" class="block bg-transparent text-white text-3xl border-b-2 border-white w-full" cols="30" rows="5" />
-        </div>
-      </div>
-      <button class="bg-brand-red block mx-auto w-32 py-2 px-4 text-white">
-        SEND
-      </button>
     </div>
-  </div>
+  </form>
 </template>
+<script>
+export default defineComponent({
+  name: 'ContactUs',
+  data () {
+    return {
+      fullName: null,
+      email: null,
+      phone: null,
+      message: null
+    };
+  },
+  methods: {
+    async sendEmail () {
+      const result = await $fetch('/api/featuredRentals', {
+        method: 'POST',
+        body: {
+          subject: 'TEST EMAIL',
+          message: this.message
+        }
+      });
+      console.log(result);
+    }
+  }
+});
+</script>
 <style scoped lang="scss">
 .wrapper{
     background-image: url('~/assets/images/backgrounds/contact_us.jpg');

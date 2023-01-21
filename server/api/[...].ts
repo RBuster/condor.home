@@ -1,6 +1,8 @@
 import { stringify } from 'querystring';
 import axios, { AxiosResponse } from 'axios';
 import { createRouter, defineEventHandler } from 'h3';
+import * as sgMail from '@sendgrid/mail';
+import { ResponseError } from '@sendgrid/helpers/classes';
 import { Listing } from '~~/interfaces/listing';
 
 const router = createRouter();
@@ -77,6 +79,48 @@ router.post('/featuredRentals', defineEventHandler(async (event) => {
   return {
     data: result.data.value as Listing[] ?? []
   };
+}));
+
+router.post('/sendEmail', defineEventHandler(async (event) => {
+  const body = await readBody(event);
+  sgMail.setApiKey('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');
+  const msg = {
+    from: 'leads@condor.homes',
+    to: 'davestrickland@condor.homes',
+    subject: body.subject || 'No subject specified',
+    html: body.message
+      ? `<p>${body.message}</p>`
+      : '<p>no message specified</p>'
+  };
+  try {
+    await sgMail.send(msg);
+    return {
+      status: 'success'
+    };
+  } catch (err) {
+    console.error(err);
+    if (err instanceof ResponseError) {
+      if (err?.response) {
+        console.error(err.response.body);
+        return {
+          status: 'failure',
+          error: {
+            code: err.code,
+            message: err.message,
+            fullError: err
+          }
+        };
+      }
+    }
+    return {
+      status: 'failure',
+      error: {
+        code: 500,
+        message: 'Unspecified Error, see fullError',
+        fullError: err
+      }
+    };
+  }
 }));
 
 export default useBase('/api', router.handler);
