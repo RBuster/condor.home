@@ -3,12 +3,12 @@
     <div>
       <nav class="bg-grey-light rounded-md w-fit mx-auto text-center mb-8 font-semibold">
         <ol class="list-reset flex">
-          <li><a href="#" class="text-black">HOME</a></li>
+          <li><a href="/" class="text-black">HOME</a></li>
           <li><span class="text-brand-red mx-2">></span></li>
-          <li><a href="#" class="text-black">MEET THE TEAM</a></li>
+          <li><a href="/team-members" class="text-black">MEET THE TEAM</a></li>
           <li><span class="text-brand-red mx-2">></span></li>
           <li class="text-black">
-            LIA IRVIN
+            SHELBY PEEBLES
           </li>
         </ol>
       </nav>
@@ -51,13 +51,13 @@
           </p>
         </div>
         <div class="team-member-image">
-          <img src="/team-members/Lia_Irvin.jpg" alt="Lia Irvin Realtor">
+          <img src="/team-members/Shelby_Peebles.jpg" alt="Shelby Peebles Realtor">
         </div>
       </div>
     </div>
     <div class="bg-black h-fit p-4 block lg:hidden">
       <div class="team-member-image">
-        <img src="/team-members/Lia_Irvin.jpg" alt="Lia Irvin Realtor">
+        <img src="/team-members/Shelby_Peebles.jpg" alt="Shelby Peebles Realtor">
       </div>
       <div class="team-member-copy-sm mt-16 text-center mb-8 mx-8 text-white">
         <p class="text-white">
@@ -66,7 +66,7 @@
       </div>
     </div>
     <div class="contact bg-brand-yellow text-center p-2 text-4xl ml-0 md:ml-96 md:text-left">
-      <span class="pb-2 sm:pb-0">806.123.4567</span> <span class="hidden sm:inline-block">|</span> email@gmail.com
+      <span class="pb-2 sm:pb-0">806.241.4976</span> <span class="hidden sm:inline-block">|</span> shelbypeebles@condor.homes
     </div>
   </div>
 </template>

@@ -3,9 +3,9 @@
     <div>
       <nav class="bg-grey-light rounded-md w-fit mx-auto text-center mb-8 font-semibold">
         <ol class="list-reset flex">
-          <li><a href="#" class="text-black">HOME</a></li>
+          <li><a href="/" class="text-black">HOME</a></li>
           <li><span class="text-brand-red mx-2">></span></li>
-          <li><a href="#" class="text-black">MEET THE TEAM</a></li>
+          <li><a href="/team-members" class="text-black">MEET THE TEAM</a></li>
           <li><span class="text-brand-red mx-2">></span></li>
           <li class="text-black">
             LIA IRVIN
@@ -73,7 +73,7 @@
     </div>
 
     <div class="contact bg-brand-yellow text-center p-2 text-4xl ml-0 md:ml-96 md:text-left">
-      <span class="pb-2 sm:pb-0">806.123.4567</span> <span class="hidden sm:inline-block">|</span> email@gmail.com
+      <span class="pb-2 sm:pb-0">806.831.6279</span> <span class="hidden sm:inline-block">|</span> liairvin@condor.homes
     </div>
     <ContactUs />
   </div>

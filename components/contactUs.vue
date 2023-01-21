@@ -1,19 +1,19 @@
 <template>
-  <div>
+  <form @submit.prevent="sendEmail">
     <div class="wrapper w-full mt-8 py-8">
       <div class="inner mx-auto">
         <div class="flex flex-wrap justify-center flex-col p-8 lg:flex-row">
           <div class="input-group">
             <label class="text-4xl text-white" for="fullName">NAME</label>
-            <input id="farts" v-model="formData.fullName" name="fullName" class="block bg-transparent text-white text-3xl border-b-2 border-white" type="text">
+            <input v-model="formData.fullName" name="fullName" class="block bg-transparent text-white text-3xl border-b-2 border-white" type="text">
           </div>
           <div class="input-group">
             <label class="text-4xl text-white" for="emailAddress">EMAIL</label>
-            <input v-model="formData.email" name="emailAddress" class="block bg-transparent text-white text-3xl border-b-2 border-white" type="text">
+            <input v-model="formData.email" name="emailAddress" class="block bg-transparent text-white text-3xl border-b-2 border-white" type="email">
           </div>
           <div class="input-group">
             <label class="text-4xl text-white" for="phoneNumber">PHONE</label>
-            <input v-model="formData.phone" name="phoneNumber" class="block bg-transparent text-white text-3xl border-b-2 border-white" type="text">
+            <input v-model="formData.phone" name="phoneNumber" class="block bg-transparent text-white text-3xl border-b-2 border-white" type="number">
           </div>
         </div>
         <div class="w-full mt-8 p-8">
@@ -33,7 +33,8 @@
         </button>
       </div>
     </div>
-  </div>
+    <input id="buster" v-model="busted" class="hidden" type="text">
+  </form>
 </template>
 <script>
 export default {
@@ -45,18 +46,20 @@ export default {
         phone: '',
         email: '',
         message: ''
-      }
+      },
+      busted: null
     };
   },
   methods: {
     async submitForm () {
-      const result = await $fetch('/api/sendEmail', {
-        method: 'POST',
-        body: {
-          data: this.formData
-        }
-      });
-      console.log(result);
+      if (!this.busted && (this.formData.fullName && this.formData.phone && this.formData.email && this.formData.message)) {
+        await $fetch('/api/sendEmail', {
+          method: 'POST',
+          body: {
+            data: this.formData
+          }
+        });
+      }
     }
   }
 };

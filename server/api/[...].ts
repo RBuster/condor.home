@@ -3,7 +3,6 @@ import axios, { AxiosResponse } from 'axios';
 import { createRouter, defineEventHandler } from 'h3';
 import * as dotenv from 'dotenv';
 import { EmailClient, EmailMessage } from '@azure/communication-email';
-import * as _ from 'lodash';
 import { Listing } from '~~/interfaces/listing';
 dotenv.config();
 
@@ -100,8 +99,8 @@ router.post('/sendEmail', defineEventHandler(async (event) => {
     recipients: {
       to: [
         {
-          email: 'daveastrickland@gmail.com',
-          displayName: 'ME'
+          email: 'liairvin@condor.homes',
+          displayName: 'Lia Irvin'
         }
       ]
     }

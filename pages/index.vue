@@ -1,7 +1,7 @@
 <template>
   <main>
     <div class="bg-brand-yellow mx-auto text-center max-w-fit px-8 py-4 font-semibold notice">
-      <a href="/legal/tx_real_estate_comm.pdf">Texas Real Estate Commission Consumer Protection Notice</a>
+      <a href="/legal/tx_real_estate_comm.pdf" target="_blank" rel="noopener noreferrer">Texas Real Estate Commission Consumer Protection Notice</a>
     </div>
     <!-- Jumbotron -->
     <div
