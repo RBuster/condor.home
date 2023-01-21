@@ -38,7 +38,6 @@
             <h2 class="font-semibold text-7xl mb-4 sm:text-9xl">
               LIA IRVIN
             </h2>
-            <span class="block text-right w-full text-brand-blue font-bold">DRE# 000000000000</span>
           </div>
         </div>
       </div>
@@ -47,7 +46,12 @@
     <div class="relative team-member-wrapper hidden lg:block">
       <div class="bg-black w-3/4 h-80 mb-28 team-member-background">
         <div class="team-member-copy-lg hidden lg:block">
-          <p class="text-white" v-html="teamMemeberCopy" />
+          <p class="text-white">
+            Lia Irvin embodies what a great realtor should be – she is sharp, instinctive, caring and possesses an extraordinary understanding of the real-estate business. Lia gained interest in real estate at a young age by watching her mother work the industry while living in Virginia. With over fourteen years experience as a Realtor, Lia has dedicated herself to her clients and their needs. She services one end of the spectrum to the other, knowing the ins and outs of the residential real estate marketplace. She is a savvy agent who utilizes traditional marketing with new and innovative methods to assist her customers as they buy or sell a home. Lia is ready to be your ideal choice for helping with all your real estate and property management needs.
+          </p>
+          <p class="text-white">
+            Lia's Designations: GRI, ABR, NAHREP Top 250 Latino Agents, Presidents Council, Century 21 Centurion Producer, Rising Professionals Network-Century 21 National, NAHREP Top 250 Latino Agents
+          </p>
         </div>
         <div class="team-member-image">
           <img src="/team-members/Lia_Irvin.jpg" alt="Lia Irvin Realtor">
@@ -58,8 +62,13 @@
       <div class="team-member-image">
         <img src="/team-members/Lia_Irvin.jpg" alt="Lia Irvin Realtor">
       </div>
-      <div class="team-member-copy-sm mt-16 text-center mb-8 mx-8 text-white">
-        <p v-html="teamMemeberCopy" />
+      <div class="team-member-copy-sm mt-16 text-center mb-8 mx-8">
+        <p class="text-white">
+          Lia Irvin embodies what a great realtor should be – she is sharp, instinctive, caring and possesses an extraordinary understanding of the real-estate business. Lia gained interest in real estate at a young age by watching her mother work the industry while living in Virginia. With over fourteen years experience as a Realtor, Lia has dedicated herself to her clients and their needs. She services one end of the spectrum to the other, knowing the ins and outs of the residential real estate marketplace. She is a savvy agent who utilizes traditional marketing with new and innovative methods to assist her customers as they buy or sell a home. Lia is ready to be your ideal choice for helping with all your real estate and property management needs.
+        </p>
+        <p class="text-white">
+          Lia's Designations: GRI, ABR, NAHREP Top 250 Latino Agents, Presidents Council, Century 21 Centurion Producer, Rising Professionals Network-Century 21 National, NAHREP Top 250 Latino Agents
+        </p>
       </div>
     </div>
 
@@ -69,11 +78,6 @@
     <ContactUs />
   </div>
 </template>
-<script setup>
-import { ContactUs } from '#components';
-const teamMemeberCopy = `<span class="text-brand-yellow">LOREM</span> The pavement with his enemy. Hahaha. I'm here. I eat green barrettes for breakfast. I'll live to see you eat that contract. Take it back. You're a fucking choir boy compared to me...
-            Get down. Because i'm going to ram it into your stomach and break your goddamn spine! Hasta la vista baby. Into the tunnel. You lie! You got what you want... Here's a couple of acres... I'm a terminator.`;
-</script>
 <style scoped lang="scss">
 .jumbotron{
   background-image: url('~/assets/images/backgrounds/teammember_jumbo.jpg');

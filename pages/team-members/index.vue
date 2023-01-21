@@ -17,12 +17,13 @@
       v-for="item in navigation"
       :key="item.name"
       :href="item.href"
-      class="mb-4"
+      class="mb-4 block"
     >{{ item.name }}</a>
   </div>
 </template>
 <script setup>
 const navigation = [
-  { name: 'Lia Irvin', href: '/team-members/lia-irvin' }
+  { name: 'Lia Irvin', href: '/team-members/lia-irvin' },
+  { name: 'Shelby Peebles', href: '/team-members/shelby-peebles' }
 ];
 </script>

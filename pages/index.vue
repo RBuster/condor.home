@@ -55,6 +55,7 @@
     <div class="bg-brand-blue text-white px-8 py-4 max-w-fit mx-auto mt-4 text-lg md:text-3xl">
       CONTACT US TO MAKE THE NEXT MOVE IN YOUR LIFE.
     </div>
+    <ContactUs />
   </main>
 </template>
 <style scoped lang="scss">

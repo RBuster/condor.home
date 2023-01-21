@@ -36,9 +36,8 @@
         <div class="flex items-center justify-center h-full">
           <div class="text-black">
             <h2 class="font-semibold text-7xl mb-4 sm:text-9xl">
-              LIA IRVIN
+              SHELBY PEEBLES
             </h2>
-            <span class="block text-right w-full text-brand-blue font-bold">DRE# 000000000000</span>
           </div>
         </div>
       </div>
@@ -47,7 +46,9 @@
     <div class="relative team-member-wrapper hidden lg:block">
       <div class="bg-black w-3/4 h-80 mb-28 team-member-background">
         <div class="team-member-copy-lg hidden lg:block">
-          <p class="text-white" v-html="teamMemeberCopy" />
+          <p class="text-white">
+            My name is Shelby Peebles and I have been a Realtor for 8 years.  I primarily work in Lubbock and the surrounding areas but have also taken my work to the Midland and Odessa area recently.  Lubbock has been home to me for almost 19 years and I love it here!  I am passionate about my job because I love helping others and seeing their dreams come to life.  My commitment to my clients is to work hard, listen, follow through, and provide the best customer service possible.  I have been married to my husband, Preston, for 10 years. We have an 8 year old daughter, Presley, who keeps us busy with school and competitive cheer. When I am not helping families with real estate I enjoy traveling, live music, and going to the lake with my family!
+          </p>
         </div>
         <div class="team-member-image">
           <img src="/team-members/Lia_Irvin.jpg" alt="Lia Irvin Realtor">
@@ -59,19 +60,16 @@
         <img src="/team-members/Lia_Irvin.jpg" alt="Lia Irvin Realtor">
       </div>
       <div class="team-member-copy-sm mt-16 text-center mb-8 mx-8 text-white">
-        <p v-html="teamMemeberCopy" />
+        <p class="text-white">
+          My name is Shelby Peebles and I have been a Realtor for 8 years.  I primarily work in Lubbock and the surrounding areas but have also taken my work to the Midland and Odessa area recently.  Lubbock has been home to me for almost 19 years and I love it here!  I am passionate about my job because I love helping others and seeing their dreams come to life.  My commitment to my clients is to work hard, listen, follow through, and provide the best customer service possible.  I have been married to my husband, Preston, for 10 years. We have an 8 year old daughter, Presley, who keeps us busy with school and competitive cheer. When I am not helping families with real estate I enjoy traveling, live music, and going to the lake with my family!
+        </p>
       </div>
     </div>
-
     <div class="contact bg-brand-yellow text-center p-2 text-4xl ml-0 md:ml-96 md:text-left">
       <span class="pb-2 sm:pb-0">806.123.4567</span> <span class="hidden sm:inline-block">|</span> email@gmail.com
     </div>
   </div>
 </template>
-<script setup>
-const teamMemeberCopy = `<span class="text-brand-yellow">LOREM</span> The pavement with his enemy. Hahaha. I'm here. I eat green barrettes for breakfast. I'll live to see you eat that contract. Take it back. You're a fucking choir boy compared to me...
-            Get down. Because i'm going to ram it into your stomach and break your goddamn spine! Hasta la vista baby. Into the tunnel. You lie! You got what you want... Here's a couple of acres... I'm a terminator.`;
-</script>
 <style scoped lang="scss">
 .jumbotron{
   background-image: url('~/assets/images/backgrounds/teammember_jumbo.jpg');
