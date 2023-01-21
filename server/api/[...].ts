@@ -1,9 +1,11 @@
 import { stringify } from 'querystring';
 import axios, { AxiosResponse } from 'axios';
 import { createRouter, defineEventHandler } from 'h3';
-import * as sgMail from '@sendgrid/mail';
-import { ResponseError } from '@sendgrid/helpers/classes';
+import * as dotenv from 'dotenv';
+import { EmailClient, EmailMessage } from '@azure/communication-email';
+import * as _ from 'lodash';
 import { Listing } from '~~/interfaces/listing';
+dotenv.config();
 
 const router = createRouter();
 
@@ -83,44 +85,30 @@ router.post('/featuredRentals', defineEventHandler(async (event) => {
 
 router.post('/sendEmail', defineEventHandler(async (event) => {
   const body = await readBody(event);
-  sgMail.setApiKey('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');
-  const msg = {
-    from: 'leads@condor.homes',
-    to: 'davestrickland@condor.homes',
-    subject: body.subject || 'No subject specified',
-    html: body.message
-      ? `<p>${body.message}</p>`
-      : '<p>no message specified</p>'
-  };
-  try {
-    await sgMail.send(msg);
-    return {
-      status: 'success'
-    };
-  } catch (err) {
-    console.error(err);
-    if (err instanceof ResponseError) {
-      if (err?.response) {
-        console.error(err.response.body);
-        return {
-          status: 'failure',
-          error: {
-            code: err.code,
-            message: err.message,
-            fullError: err
-          }
-        };
-      }
-    }
-    return {
-      status: 'failure',
-      error: {
-        code: 500,
-        message: 'Unspecified Error, see fullError',
-        fullError: err
-      }
-    };
+  const connString = process.env.AZURE_CONNECTION_STRING;
+  if (!connString) {
+    return 'invalid configuration';
   }
+  const compiled = `Contact us form submitted by ${body.data.fullName}, please contact by phone ${body.data.phone} or email ${body.data.email}! Additional message follows...<br><br> ${body.data.message}`;
+  const emailClient = new EmailClient(connString);
+  const emailMessage: EmailMessage = {
+    sender: 'donotreply@condor.homes',
+    content: {
+      subject: 'Contact Us Form Submission',
+      html: compiled
+    },
+    recipients: {
+      to: [
+        {
+          email: 'daveastrickland@gmail.com',
+          displayName: 'ME'
+        }
+      ]
+    }
+  };
+
+  const response = await emailClient.send(emailMessage);
+  return !!response;
 }));
 
 export default useBase('/api', router.handler);

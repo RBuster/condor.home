@@ -66,9 +66,11 @@
     <div class="contact bg-brand-yellow text-center p-2 text-4xl ml-0 md:ml-96 md:text-left">
       <span class="pb-2 sm:pb-0">806.123.4567</span> <span class="hidden sm:inline-block">|</span> email@gmail.com
     </div>
+    <ContactUs />
   </div>
 </template>
 <script setup>
+import { ContactUs } from '#components';
 const teamMemeberCopy = `<span class="text-brand-yellow">LOREM</span> The pavement with his enemy. Hahaha. I'm here. I eat green barrettes for breakfast. I'll live to see you eat that contract. Take it back. You're a fucking choir boy compared to me...
             Get down. Because i'm going to ram it into your stomach and break your goddamn spine! Hasta la vista baby. Into the tunnel. You lie! You got what you want... Here's a couple of acres... I'm a terminator.`;
 </script>
