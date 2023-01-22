@@ -105,9 +105,12 @@ router.post('/sendEmail', defineEventHandler(async (event) => {
       ]
     }
   };
-
-  const response = await emailClient.send(emailMessage);
-  return !!response;
+  try {
+    const response = await emailClient.send(emailMessage);
+    return !!response;
+  } catch (error) {
+    return false;
+  }
 }));
 
 export default useBase('/api', router.handler);
