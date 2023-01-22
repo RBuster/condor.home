@@ -29,7 +29,12 @@
               />
             </div>
           </div>
-          <button class="bg-brand-red block mx-auto w-32 py-2 px-4 text-white" @click="submitForm()">
+          <button
+            class="bg-brand-red block mx-auto w-32 py-2 px-4 text-white button"
+            :disabled="!formInvalid"
+            :class="{'disabled': !formInvalid}"
+            @click="submitForm()"
+          >
             SEND
           </button>
         </div>
@@ -69,6 +74,11 @@ export default {
       submitSuccess: false
     };
   },
+  computed: {
+    formInvalid () {
+      return !!(this.formData.fullName && this.formData.phone && this.formData.email && this.formData.message);
+    }
+  },
   methods: {
     async submitForm () {
       if (!this.busted && (this.formData.fullName && this.formData.phone && this.formData.email && this.formData.message)) {
@@ -100,6 +110,10 @@ export default {
 }
 .form-submitted{
   animation: fadein 2s;
+}
+.button.disabled{
+  background-color: grey;
+  color: black;
 }
 .wrapper{
     background-image: url('~/assets/images/backgrounds/contact_us.jpg');
