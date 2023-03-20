@@ -4,7 +4,7 @@
       <img class="w-44 mx-auto" src="~/assets/images/logos/logo_stub_md.png" alt="">
     </div>
     <div class="h-5 w-full block bg-brand-yellow" />
-    <div class="bg-black pt-4">
+    <div class="pt-4 footer-main">
       <div class="info flex flex-col justify-center w-full pb-8 text-white sm:flex-row">
         <div class="text-center pb-4 mx-4 info-block">
           <div class="text-brand-red">
@@ -75,6 +75,9 @@ footer{
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+  }
+  .footer-main{
+      background-image: url('~/assets/images/backgrounds/footer_bg.png');
   }
   .footer-copy{
     .badge, .social-icons{

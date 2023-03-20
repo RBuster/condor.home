@@ -26,7 +26,7 @@
         bg-fixed"
         style="background-color: rgba(0, 0, 0, 0.6)"
       >
-        <div class="flex justify-end items-end h-full pb-12 pr-12">
+        <div class="flex justify-end items-end h-full sm:pb-12 sm:pr-12">
           <div class="text-white">
             <h4 class="font-semibold text-base sm:text-xl mb-6" style="letter-spacing: 12px;">
               BUYING <span class="text-brand-yellow">|</span> SELLING <span class="text-brand-yellow">|</span> RENTING
