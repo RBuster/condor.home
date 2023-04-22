@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <nav class="bg-grey-light rounded-md w-fit mx-auto text-center mb-8 font-semibold">
+      <nav class="text-2xl bg-grey-light rounded-md w-fit mx-auto text-center mb-8 font-semibold">
         <ol class="list-reset flex">
           <li><a href="/" class="text-black">HOME</a></li>
           <li><span class="text-brand-red mx-2">></span></li>
